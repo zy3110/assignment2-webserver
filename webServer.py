@@ -40,12 +40,12 @@ def webServer(port=13331):
               
       #Content-Type is an example on how to send a header as bytes. There are more!
       
-      outputdata = b'HTTP/1.1 200 OK'
-      outputdata += b'Server: Apache/2.4.6 (Windows)'
+      outputdata = b'HTTP/1.1 200 OK\r\n'
+      outputdata += b'Server: Apache/2.4.6 (Windows)\r\n'
       # outputdata += b'GET /pub/WWW/ HTTP/1.1\r\n'
       # outputdata += b'Host: 127.0.0.1\r\n'
-      outputdata += b'Connection: close'
-      outputdata += b"Content-Type: text/html; charset=UTF-8"
+      outputdata += b'Connection: close\r\n'
+      outputdata += b"Content-Type: text/html; charset=UTF-8\r\n"
       outputdata += b"\r\n\r\n"
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
       # print(outputdata)
